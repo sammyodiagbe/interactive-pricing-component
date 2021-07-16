@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+// primary
+
+$full_slider_bar: hsl(174, 77%, 80%);
+$slider_background: hsl(174, 86%, 45%);
+$discount_background: hsl(14, 92%, 95%);
+$discount_text: hsl(15, 100%, 70%);
+$cta-text: hsl(226, 100%, 87%);
+// Neutral
+
+$pricing_component_background: hsl(0, 0%, 100%);
+$main_background: hsl(230, 100%, 99%);
+$empty_slider_bar: hsl(224, 65%, 95%);
+$toggle_background: hsl(223, 50%, 87%);
+$text: hsl(225, 20%, 60%);
+$call_to_action: hsl(277, 35%, 25%);
+
+$introductory_typography_font_size: 15px;
+$font-family: "Manrope";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body,
+html {
+  font-family: "Manrope", sans-serif;
+  //   color: ;
+}
+
+div.container {
+  div.card {
+    min-height: 380px;
+    background: url(../assets/bg-pattern.svg);
+    background-position: bottom left;
+    position: relative;
+
+    padding-top: 80px;
+    div.top-half {
+      text-align: center;
+      position: relative;
+      h1 {
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 13px;
+        padding: 0 100px;
+        line-height: 27px;
+        color: $text;
+      }
+
+      img.pattern-circle {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    div.offer-card {
+      background: #fff;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 85vw;
+      transform: translateX(-50%);
+      padding: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      div.range-slider-price {
+        padding: 30px 20px;
+        h4 {
+          padding-bottom: 20px;
+          text-align: center;
+          color: $text;
+          font-size: 12px;
+          letter-spacing: 2.5px;
+        }
+
+        div.custom-progress {
+          position: relative;
+          height: 8px;
+          margin: 30px 0;
+          //   progress bar
+          progress.progress,
+          input.range-slider {
+            position: absolute;
+            height: 8px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+          }
+
+          progress {
+            background-color: $full_slider_bar;
+            border: 0;
+            border-radius: 9px;
+            &::-webkit-progress-bar {
+              background-color: $empty_slider_bar;
+              border-radius: 10px;
+              border: none;
+            }
+
+            &::-webkit-progress-value {
+              background-color: $full_slider_bar;
+              border-radius: 10px;
+            }
+          }
+
+          input.range-slider {
+            appearance: none;
+            background: transparent;
+            &::-webkit-slider-thumb {
+              appearance: none;
+              position: relative;
+              height: 40px;
+              width: 40px;
+              background: url(../assets/icon-slider.svg), $slider_background;
+              z-index: 10;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              z-index: 20;
+
+              &:hover {
+                box-shadow: 0 20px 30px $full_slider_bar;
+              }
+            }
+          }
+        }
+        // input.range-slider {
+        //   appearance: none;
+        //   width: 100%;
+        //   height: 25px;
+        //   transition: 0.2s;
+        //   //   background-color: #9a905d;
+        //   &::-webkit-slider-thumb {
+        //     -webkit-appearance: none;
+        //     appearance: none;
+        //     width: 40px;
+        //     height: 40px;
+        //     background: url(../assets/icon-slider.svg), $slider_background;
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     border-radius: 50%;
+        //     cursor: pointer;
+        //     margin-top: -15px;
+        //   }
+
+        //   &::-webkit-slider-runnable-track {
+        //     height: 10px;
+        //     -webkit-appearance: none;
+        //     color: #13bba4;
+        //     margin-top: -1px;
+        //   }
+
+        //   &::-ms-fill-lower {
+        //     background: #2a6495;
+        //     border: 0.2px solid #010101;
+        //     border-radius: 2.6px;
+        //     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        //   }
+
+        //   &::-ms-fill-upper {
+        //     background: #3071a9;
+        //     border: 0.2px solid #010101;
+        //     border-radius: 2.6px;
+        //     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        //   }
+
+        //   &::-webkit-slider-runnable-track {
+        //     height: 8px;
+        //     border-radius: 10px;
+        //   }
+        // }
+
+        h1.price-per-month {
+          text-align: center;
+          font-size: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bolder;
+          padding: 10px 0;
+          color: $call_to_action;
+          span.sm {
+            font-size: 14px;
+            vertical-align: center;
+            padding-left: 10px;
+            color: $text;
+          }
+        }
+      }
+
+      div.toggle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        label.toggle {
+          position: relative;
+          margin: 0 15px;
+          height: 20px;
+          width: 40px;
+          border-radius: 15px;
+          background: $empty_slider_bar;
+          &.checked {
+            transition-delay: 300ms;
+            &::before {
+              background: $slider_background;
+              transition-delay: 300ms;
+            }
+
+            &::after {
+              left: calc(100% - 18px);
+              transition: 300ms;
+            }
+          }
+          &::before {
+            position: absolute;
+            height: inherit;
+            width: inherit;
+            left: 0;
+            top: 0;
+            content: "";
+            width: 100%;
+            border-radius: 25px;
+            transition: 300ms;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            border-radius: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px;
+            background: #fff;
+            transition: 300ms;
+            transition-delay: 300ms;
+          }
+          input {
+            appearance: none;
+          }
+        }
+        h6.year {
+          span.percent-off {
+            background: $discount_background;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-size: 10px;
+            color: $discount_text;
+            .bg {
+              display: none;
+            }
+          }
+        }
+      }
+
+      div.offers-and-action {
+        padding: 20px;
+        text-align: center;
+        div.offers {
+          padding: 30px 0;
+          color: $text;
+          div.offer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 0;
+            img {
+              margin-right: 10px;
+            }
+            p {
+              font-size: 13px;
+              font-weight: 500;
+            }
+          }
+        }
+
+        button.start-trial {
+          background: $call_to_action;
+          color: $pricing_component_background;
+          padding: 12px 50px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div.container {
+    div.card {
+      div.offer-card {
+        width: 500px;
+        padding: 30px;
+        div.range-slider-price {
+          display: grid;
+          grid-template:
+            "pageview pricing"
+            "slider slider";
+          align-items: center;
+          h4.pageview {
+            grid-area: pageview;
+            padding-bottom: 0;
+            text-align: left;
+          }
+
+          div.custom-progress {
+            grid-area: slider;
+          }
+
+          h1.price-per-month {
+            grid-area: pricing;
+            padding: 0;
+            text-align: right;
+            justify-self: flex-end;
+            font-size: 35px;
+          }
+        }
+        div.toggle-container {
+          padding-top: 0;
+          h6.year {
+            width: auto;
+            span.percent-off {
+              span.bg {
+                display: inline-block;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      div.offers-and-action {
+        display: flex;
+
+        align-items: center;
+        padding: 20px 0;
+        justify-content: space-between;
+        button {
+          align-self: center;
+          justify-self: center;
+          cursor: pointer;
+          padding: 20px 30px;
+        }
+
+        div.offers {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Odiagbe Samson Osaro" />
+    <title>Interactive Pricing Component</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="top-half">
+            <img src="./assets//pattern-circles.svg" class="pattern-circle"/>
+          <h1>Simple, traffic-based pricing.</h1>
+          <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+
+        <div class="offer-card">
+          <div class="range-slider-price">
+            <h4 class="pageview">100K PAGEVIEWS</h4>
+           <div class="custom-progress">
+               
+               <input type="range" id="range-slider" value="40" class="range-slider" min="0" max="100" step="1"/>
+               <progress class="progress" id="progress" value="40" min="0" max="100"></progress>
+           </div>
+            <h1 class="price-per-month">$16.00 <span class="sm">/  month.</span></h1>
+          </div>
+          <div class="toggle-container">
+            <h6>Monthly Billing</h6>
+            <label class="toggle" for="choose-plan" id="toggle-parent">
+                <input type="checkbox" name="choose-plan" id="choose-plan" />
+            </label>
+            <h6 class="year">Yearly Billing <span class="percent-off">-25% <span class="bg">discount</span></h6>
+          </div>
+          <div class="offers-and-action">
+              <div class="offers">
+                <div class="offer">
+                    <img src="./assets/icon-check.svg" />
+                    <p>Unlimited websites</p>
+                </div>
+                <div class="offer">
+                  <img src="./assets/icon-check.svg" />
+                  <p>100% data ownership</p>
+              </div>
+              <div class="offer">
+                  <img src="./assets/icon-check.svg" />
+                  <p>Email reports</p>
+              </div> 
+              </div>
+              <button class="start-trial">Start my trial</button>
+               
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js" />
+  </body>
+</html>

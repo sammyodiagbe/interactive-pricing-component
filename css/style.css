@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body,
+html {
+  font-family: "Manrope", sans-serif;
+}
+
+div.container div.card {
+  min-height: 380px;
+  background: url(../assets/bg-pattern.svg);
+  background-position: bottom left;
+  position: relative;
+  padding-top: 80px;
+}
+
+div.container div.card div.top-half {
+  text-align: center;
+  position: relative;
+}
+
+div.container div.card div.top-half h1 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+div.container div.card div.top-half p {
+  font-size: 13px;
+  padding: 0 100px;
+  line-height: 27px;
+  color: #858fad;
+}
+
+div.container div.card div.top-half img.pattern-circle {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.container div.card div.offer-card {
+  background: #fff;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 85vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+div.container div.card div.offer-card div.range-slider-price {
+  padding: 30px 20px;
+}
+
+div.container div.card div.offer-card div.range-slider-price h4 {
+  padding-bottom: 20px;
+  text-align: center;
+  color: #858fad;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress {
+  position: relative;
+  height: 8px;
+  margin: 30px 0;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress progress.progress,
+div.container div.card div.offer-card div.range-slider-price div.custom-progress input.range-slider {
+  position: absolute;
+  height: 8px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress progress {
+  background-color: #a5f3eb;
+  border: 0;
+  border-radius: 9px;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress progress::-webkit-progress-bar {
+  background-color: #eaeefb;
+  border-radius: 10px;
+  border: none;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress progress::-webkit-progress-value {
+  background-color: #a5f3eb;
+  border-radius: 10px;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress input.range-slider {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress input.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: url(../assets/icon-slider.svg), #10d5c2;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+div.container div.card div.offer-card div.range-slider-price div.custom-progress input.range-slider::-webkit-slider-thumb:hover {
+  -webkit-box-shadow: 0 20px 30px #a5f3eb;
+          box-shadow: 0 20px 30px #a5f3eb;
+}
+
+div.container div.card div.offer-card div.range-slider-price h1.price-per-month {
+  text-align: center;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bolder;
+  padding: 10px 0;
+  color: #452956;
+}
+
+div.container div.card div.offer-card div.range-slider-price h1.price-per-month span.sm {
+  font-size: 14px;
+  vertical-align: center;
+  padding-left: 10px;
+  color: #858fad;
+}
+
+div.container div.card div.offer-card div.toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #858fad;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle {
+  position: relative;
+  margin: 0 15px;
+  height: 20px;
+  width: 40px;
+  border-radius: 15px;
+  background: #eaeefb;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle.checked {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle.checked::before {
+  background: #10d5c2;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle.checked::after {
+  left: calc(100% - 18px);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle::before {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  border-radius: 25px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle::after {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  border-radius: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5px;
+  background: #fff;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+div.container div.card div.offer-card div.toggle-container label.toggle input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+div.container div.card div.offer-card div.toggle-container h6.year span.percent-off {
+  background: #feece7;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 10px;
+  color: #ff8c66;
+}
+
+div.container div.card div.offer-card div.toggle-container h6.year span.percent-off .bg {
+  display: none;
+}
+
+div.container div.card div.offer-card div.offers-and-action {
+  padding: 20px;
+  text-align: center;
+}
+
+div.container div.card div.offer-card div.offers-and-action div.offers {
+  padding: 30px 0;
+  color: #858fad;
+}
+
+div.container div.card div.offer-card div.offers-and-action div.offers div.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 0;
+}
+
+div.container div.card div.offer-card div.offers-and-action div.offers div.offer img {
+  margin-right: 10px;
+}
+
+div.container div.card div.offer-card div.offers-and-action div.offers div.offer p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+div.container div.card div.offer-card div.offers-and-action button.start-trial {
+  background: #452956;
+  color: white;
+  padding: 12px 50px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+  div.container div.card div.offer-card {
+    width: 500px;
+    padding: 30px;
+  }
+  div.container div.card div.offer-card div.range-slider-price {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "pageview pricing" "slider slider";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.container div.card div.offer-card div.range-slider-price h4.pageview {
+    grid-area: pageview;
+    padding-bottom: 0;
+    text-align: left;
+  }
+  div.container div.card div.offer-card div.range-slider-price div.custom-progress {
+    grid-area: slider;
+  }
+  div.container div.card div.offer-card div.range-slider-price h1.price-per-month {
+    grid-area: pricing;
+    padding: 0;
+    text-align: right;
+    justify-self: flex-end;
+    font-size: 35px;
+  }
+  div.container div.card div.offer-card div.toggle-container {
+    padding-top: 0;
+  }
+  div.container div.card div.offer-card div.toggle-container h6.year {
+    width: auto;
+  }
+  div.container div.card div.offer-card div.toggle-container h6.year span.percent-off span.bg {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  div.container div.card div.offers-and-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div.container div.card div.offers-and-action button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    cursor: pointer;
+    padding: 20px 30px;
+  }
+  div.container div.card div.offers-and-action div.offers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
